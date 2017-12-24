@@ -375,7 +375,7 @@ location /content {
     content_by_lua_block {
         require("mod.ngx_ctx").apply()
         local r = ngx.ctx.request
-        r:run(r.REWRITE_PHASE)
+        r:run(r.CONTENT_PHASE)
     }
 }
 \end{lstlisting}
